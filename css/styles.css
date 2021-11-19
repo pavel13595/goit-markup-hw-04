@@ -97,6 +97,7 @@ img {
 .site-contacts {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .site-contacts .item:not(:last-child) {
   margin-right: 50px;
@@ -123,8 +124,9 @@ img {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../images/bimg-hero.jpg);
-  /* background-repeat: no-repeat; */
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bimg-hero.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -237,6 +239,9 @@ img {
   padding-bottom: 60px;
   padding-top: 60px;
 }
+.footer .container {
+  display: flex;
+}
 .footer-logo {
   display: inline-block;
 
@@ -254,6 +259,9 @@ img {
   font-size: 14px;
   line-height: 1.71;
 }
+.address-list {
+  margin-right: 70px;
+}
 .footer-contacts .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -267,6 +275,52 @@ img {
 .footer-contacts .link:hover,
 .footer-contacts .link:focus {
   color: var(--accent-text-color);
+}
+.social-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 12px;
+}
+
+.social-icon {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 0 auto;
+}
+.social-item {
+}
+
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-link {
+  display: block;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #ffffff;
+  height: 44px;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: #2196f3;
+}
+/* Постоянные клиенты */
+.client-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-top: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 /* Кнопки */
 .button {
@@ -291,10 +345,14 @@ img {
 .button.secondary:hover {
   background-color: var(--accent-text-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button.secondary:focus {
   background-color: var(--accent-text-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button.hero-btn {
   font-weight: 700;
@@ -383,13 +441,107 @@ img {
   background: #ffffff;
 }
 .portfolio-link {
+  display: block;
   text-decoration: none;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card {
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+/* Иконки */
+.icon {
+  fill: #afb1b8;
+  fill: currentColor;
+}
+
+.icon-link.icon {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.icon-feature {
+  height: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.icon-feature .icon {
+  margin: 0;
+  padding: 0;
+}
+.client-link {
+  display: flex;
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+.client-item .client-link:hover,
+.client-item .client-link:focus {
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+.icon-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 28px auto 0 auto;
+  color: #2196f3;
+}
+.client-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  color: #2196f3;
+}
+
+.icon-list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+
+  justify-content: center;
+  margin: 16px auto 0 auto;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: block;
+  padding: 12px;
+  fill: #afb1b8;
+}
+.team-link:hover,
+.team-link:focus {
+  background-color: #2196f3;
+  fill: #ffffff;
 }
 
 /* Основоной цвет текста  #212121*/

@@ -240,6 +240,7 @@ img {
   padding-top: 60px;
 }
 .footer .container {
+  align-items: baseline;
   display: flex;
 }
 .footer-logo {
@@ -284,16 +285,12 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
-  padding-top: 12px;
 }
-
 .social-icon {
   padding-left: 0;
   display: flex;
   justify-content: center;
   margin: 16px auto 0 auto;
-}
-.social-item {
 }
 
 .social-item:not(:last-child) {
